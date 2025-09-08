@@ -49,7 +49,8 @@ class Servo:
             else:
                 self.data.current_us = angles[i]
                 duty(int(self.data.current_us / 20000 * 100))
-                
+
+#optional- can be removed just import the python file then you can do soemthing like this.
 s = Servo()
 s.add_servo([18,19])
 
@@ -58,5 +59,6 @@ while True:
     time.sleep(1)
     s.write([0,180],[True,True])
     time.sleep(1)
+
 
 
